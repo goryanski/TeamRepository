@@ -50,6 +50,7 @@ namespace Practice
             this.btnCrossItOut.TabIndex = 1;
             this.btnCrossItOut.Text = "Cross It Out";
             this.btnCrossItOut.UseVisualStyleBackColor = true;
+            this.btnCrossItOut.Click += new System.EventHandler(this.BtnCrossItOut_Click);
             // 
             // Form1
             // 

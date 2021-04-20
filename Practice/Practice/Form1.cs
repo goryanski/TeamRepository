@@ -12,6 +12,7 @@ namespace Practice
 {
     public partial class Form1 : Form
     {
+        List<string> tasks;
         public Form1()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace Practice
 
         private void Form_Load(object sender, EventArgs e)
         {
-            List<string> tasks = new List<string>
+            tasks = new List<string>
             {
                 "task 1",
                 "task 2",
@@ -35,6 +36,22 @@ namespace Practice
 
         private void DisplayTasks(List<string> tasks)
         {
+            lbTasks.DataSource = tasks;
+        }
+
+        private void BtnCrossItOut_Click(object sender, EventArgs e)
+        {
+            if(lbTasks.SelectedIndex != -1)
+            {
+                var task = lbTasks.SelectedItem as string;
+                tasks.Remove(task);
+                ReloadTasksList();
+            }
+        }
+
+        private void ReloadTasksList()
+        {
+            lbTasks.DataSource = null;
             lbTasks.DataSource = tasks;
         }
     }
