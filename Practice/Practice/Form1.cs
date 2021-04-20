@@ -29,6 +29,13 @@ namespace Practice
                 "task 5",
                 "task 6",
             };
+
+            DisplayTasks(tasks);
+        }
+
+        private void DisplayTasks(List<string> tasks)
+        {
+            lbTasks.DataSource = tasks;
         }
     }
 }
