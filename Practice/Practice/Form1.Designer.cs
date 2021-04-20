@@ -29,13 +29,45 @@ namespace Practice
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lbTasks = new System.Windows.Forms.ListBox();
+            this.btnCrossItOut = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // lbTasks
+            // 
+            this.lbTasks.FormattingEnabled = true;
+            this.lbTasks.ItemHeight = 16;
+            this.lbTasks.Location = new System.Drawing.Point(43, 45);
+            this.lbTasks.Name = "lbTasks";
+            this.lbTasks.Size = new System.Drawing.Size(207, 324);
+            this.lbTasks.TabIndex = 0;
+            // 
+            // btnCrossItOut
+            // 
+            this.btnCrossItOut.Location = new System.Drawing.Point(270, 45);
+            this.btnCrossItOut.Name = "btnCrossItOut";
+            this.btnCrossItOut.Size = new System.Drawing.Size(111, 73);
+            this.btnCrossItOut.TabIndex = 1;
+            this.btnCrossItOut.Text = "Cross It Out";
+            this.btnCrossItOut.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(434, 410);
+            this.Controls.Add(this.btnCrossItOut);
+            this.Controls.Add(this.lbTasks);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox lbTasks;
+        private System.Windows.Forms.Button btnCrossItOut;
     }
 }
 
